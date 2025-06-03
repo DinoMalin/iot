@@ -1,0 +1,9 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "generic/alpine318"
+  config.vm.box_version = "4.3.12"
+  config.vm.hostname = "jcarioS"
+
+  config.vm.provision "shell",
+    name: "init",
+    path: "init.sh"
+end
